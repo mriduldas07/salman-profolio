@@ -8,7 +8,7 @@ import {
 export default function Profile() {
   return (
     <div className="text-white mx-auto">
-      <div className="max-w-[150px] max-h-[150px] lg:max-w-[200px] lg:max-h-[200px] mx-auto mt-[-23%]">
+      <div className="max-w-[145px] max-h-[150px] lg:max-w-[200px] lg:max-h-[200px] mx-auto mt-[-23%]">
         <img src="assets/profile_picture.png" className="min-w-full" alt="" />
       </div>
       <div className="mx-auto">
