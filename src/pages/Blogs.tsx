@@ -1,3 +1,5 @@
+import BlogCard from "../components/BlogCard";
+
 export default function Blogs() {
   return (
     <div className="ps-[20px] pr-[15px] mx-auto lg:ps-[73px] lg:pr-[55px]">
@@ -7,21 +9,27 @@ export default function Blogs() {
           <img src="/assets/Line.png" alt="" />
         </div>
       </div>
-      <div className="pt-[13px]"></div>
-      <div className="pt-[35px] pb-5 lg:pb-0 max-h-[230px]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px] mx-auto">
-          <div className="flex flex-col items-center lg:block">
-            <h1 className="text-[27.737px]">Work Skill</h1>
-            <div className="grid lg:grid-rows-2 gap-[24px] mx-auto pt-[21px]">
-              <div className="grid grid-cols-3 gap-2"></div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center lg:block">
-            <h1 className="text-[27.737px]">Soft Skill</h1>
-            <div className="grid lg:grid-rows-2 gap-[24px] pt-[21px]">
-              <div className="grid grid-cols-3 gap-2"></div>
-            </div>
-          </div>
+      <div className="pt-[5px]">
+        <ul className="flex justify-end items-center gap-[16px]">
+          <li>All</li>
+          <li>All</li>
+          <li>All</li>
+          <li>All</li>
+        </ul>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[25px]">
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
+      </div>
+      <div className="flex justify-center lg:justify-end">
+        {" "}
+        <div className="w-[250px] my-[10px] rounded-[20px] bg-gradient-to-r from-[#FF9C1A] to-[#E80505]">
+          <button className="w-full py-2 text-white font-semibold">
+            All Blogs
+          </button>
         </div>
       </div>
     </div>
