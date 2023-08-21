@@ -23,7 +23,7 @@ export default function AllBlogs() {
   }
 
   return (
-    <div className="ps-[20px] pb-6 pr-[15px] mx-auto lg:ps-[73px] lg:pr-[55px]">
+    <div className="ps-[20px] mt-[-50px] lg:mt-0 pb-6 pr-[15px] mx-auto lg:ps-[73px] lg:pr-[55px]">
       <Category />
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-[20px] mx-auto">
         {content}
