@@ -1,7 +1,27 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Link } from "react-router-dom";
 import BlogCard from "../components/BlogCard";
+import Category from "../components/Category";
+import Loading from "../components/Loading";
+import { useGetBlogsQuery } from "../redux/features/blogs/blogsSlice";
+import { IBlogs } from "../types/globalTypes";
 
 export default function Blogs() {
+  const { data, isLoading } = useGetBlogsQuery(undefined);
+
+  const blogsData = data?.data?.slice(0, 4);
+
+  let content;
+
+  if (isLoading) {
+    content = <Loading />;
+  }
+
+  if (!isLoading && blogsData?.length > 0) {
+    content = blogsData.map((b: IBlogs) => <BlogCard blog={b} key={b._id} />);
+  }
   return (
     <div className="ps-[20px] pr-[15px] mx-auto lg:ps-[73px] lg:pr-[55px]">
       <div className="flex justify-start items-center gap-[33px] pt-[18px]">
@@ -11,19 +31,10 @@ export default function Blogs() {
         </div>
       </div>
       <div className="pt-[5px]">
-        <ul className="flex justify-end items-center gap-[16px]">
-          <li>All</li>
-          <li>All</li>
-          <li>All</li>
-          <li>All</li>
-        </ul>
+        <Category />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[25px]">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {content}
       </div>
       <div className="flex justify-center lg:justify-end">
         {" "}
