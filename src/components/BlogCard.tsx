@@ -1,6 +1,6 @@
 export default function BlogCard() {
   return (
-    <div className="card max-w-[350px] bg-base-100 shadow-xl">
+    <div className="card max-w-[350px] bg-[#FFE3BF] shadow-xl">
       <figure className="px-10 pt-10">
         <img
           src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"

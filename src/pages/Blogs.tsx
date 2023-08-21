@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BlogCard from "../components/BlogCard";
 
 export default function Blogs() {
@@ -26,11 +27,13 @@ export default function Blogs() {
       </div>
       <div className="flex justify-center lg:justify-end">
         {" "}
-        <div className="w-[250px] my-[10px] rounded-[20px] bg-gradient-to-r from-[#FF9C1A] to-[#E80505]">
-          <button className="w-full py-2 text-white font-semibold">
-            All Blogs
-          </button>
-        </div>
+        <Link to={`/all`}>
+          <div className="w-[250px] my-[10px] rounded-[20px] bg-gradient-to-r from-[#FF9C1A] to-[#E80505]">
+            <button className="w-full py-2 text-white font-semibold">
+              All Blogs
+            </button>
+          </div>
+        </Link>
       </div>
     </div>
   );
