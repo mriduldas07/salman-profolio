@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   BiLogoFacebook,
   BiLogoGmail,
@@ -8,9 +9,14 @@ import {
 export default function Profile() {
   return (
     <div className="text-white mx-auto">
-      <div className="max-w-[145px] max-h-[150px] lg:max-w-[200px] lg:max-h-[200px] mx-auto mt-[-23%]">
+      <motion.div
+        className="max-w-[145px] max-h-[150px] lg:max-w-[200px] lg:max-h-[200px] mx-auto mt-[-23%]"
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1, type: "spring", stiffness: 170 }}
+      >
         <img src="assets/profile_picture.png" className="min-w-full" alt="" />
-      </div>
+      </motion.div>
       <div className="mx-auto">
         <h1 className="text-center text-[#0B0909] text-[28.42px] font-semibold mb-[4px]">
           Md.Salman Rahman
