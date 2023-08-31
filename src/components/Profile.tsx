@@ -36,7 +36,12 @@ export default function Profile() {
               stiffness: 170,
             }}
           >
-            <BiLogoFacebook size={24} style={{ color: "#1877F2" }} />
+            <a
+              href="https://www.facebook.com/mdsalman.rahman.980"
+              target="_blank"
+            >
+              <BiLogoFacebook size={24} style={{ color: "#1877F2" }} />
+            </a>
           </motion.div>
           <motion.div
             className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer"
@@ -49,7 +54,12 @@ export default function Profile() {
               stiffness: 170,
             }}
           >
-            <BiLogoLinkedin size={24} style={{ color: "#1877F2" }} />
+            <a
+              href="https://www.linkedin.com/in/md-salman-rahman-60bb51219/"
+              target="_blank"
+            >
+              <BiLogoLinkedin size={24} style={{ color: "#1877F2" }} />
+            </a>
           </motion.div>
           <motion.div
             className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer"
