@@ -62,7 +62,9 @@ export default function Profile() {
               stiffness: 170,
             }}
           >
-            <BiLogoGmail size={24} style={{ color: "red" }} />
+            <a href="mailto:mriduldas0325@gmail.com">
+              <BiLogoGmail size={24} style={{ color: "red" }} />
+            </a>
           </motion.div>
           <motion.div
             className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer"
@@ -75,7 +77,9 @@ export default function Profile() {
               stiffness: 170,
             }}
           >
-            <BiLogoWhatsapp size={24} style={{ color: "green" }} />
+            <a href="https://wa.me/8801724838006" target="_blank">
+              <BiLogoWhatsapp size={24} style={{ color: "green" }} />
+            </a>
           </motion.div>
         </div>
       </div>
