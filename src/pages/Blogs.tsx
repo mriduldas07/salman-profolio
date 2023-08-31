@@ -6,12 +6,14 @@ import BlogCard from "../components/BlogCard";
 import Category from "../components/Category";
 import Loading from "../components/Loading";
 import { useGetBlogsQuery } from "../redux/features/blogs/blogsSlice";
+import { useAppSelector } from "../redux/hooks";
 import { IBlogs } from "../types/globalTypes";
 
 export default function Blogs() {
   const { data, isLoading } = useGetBlogsQuery(undefined);
+  const { category } = useAppSelector((state) => state.filter);
 
-  const blogsData = data?.data?.slice(0, 4);
+  const blogsData = data?.data;
 
   let content;
 
@@ -19,8 +21,18 @@ export default function Blogs() {
     content = <Loading />;
   }
 
+  const filterByCategory = (f: IBlogs) => {
+    if (category) {
+      return f.category === category;
+    }
+    return f;
+  };
+
   if (!isLoading && blogsData?.length > 0) {
-    content = blogsData.map((b: IBlogs) => <BlogCard blog={b} key={b._id} />);
+    content = blogsData
+      .filter(filterByCategory)
+      ?.slice(0, 4)
+      .map((b: IBlogs) => <BlogCard blog={b} key={b._id} />);
   }
   return (
     <div className="ps-[20px] pr-[15px] mx-auto lg:ps-[73px] lg:pr-[55px]">

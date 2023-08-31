@@ -25,18 +25,58 @@ export default function Profile() {
           Student of Textile Engineering
         </p>
         <div className="flex justify-center items-center gap-[8.269px]">
-          <div className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer">
+          <motion.div
+            className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer"
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 1,
+              delay: 1.6,
+              type: "spring",
+              stiffness: 170,
+            }}
+          >
             <BiLogoFacebook size={24} style={{ color: "#1877F2" }} />
-          </div>
-          <div className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer">
+          </motion.div>
+          <motion.div
+            className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer"
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 1,
+              delay: 1.4,
+              type: "spring",
+              stiffness: 170,
+            }}
+          >
             <BiLogoLinkedin size={24} style={{ color: "#1877F2" }} />
-          </div>
-          <div className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer">
+          </motion.div>
+          <motion.div
+            className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer"
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 1,
+              delay: 1.2,
+              type: "spring",
+              stiffness: 170,
+            }}
+          >
             <BiLogoGmail size={24} style={{ color: "red" }} />
-          </div>
-          <div className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer">
+          </motion.div>
+          <motion.div
+            className="bg-[#F2F7FC] py-[15.67px] px-[20.81px] rounded-[8px] cursor-pointer"
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 1,
+              delay: 1,
+              type: "spring",
+              stiffness: 170,
+            }}
+          >
             <BiLogoWhatsapp size={24} style={{ color: "green" }} />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
