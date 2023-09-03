@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Profile from "../components/Profile";
@@ -17,9 +18,19 @@ export default function Layout() {
         <div className="lg:col-span-4 bg-[#FFFFFF] rounded-[20px] pb-3 mx-auto min-w-[370px] lg:min-w-[400px]">
           <Profile />
           <div className="mx-auto">
-            <div className="w-[350px] h-[350px] mx-auto mt-[22.34px] mb-3">
+            <motion.div
+              className="w-[350px] h-[350px] mx-auto mt-[22.34px] mb-3"
+              initial={{ x: -500 }}
+              animate={{ x: 0 }}
+              transition={{
+                duration: 1,
+                delay: 1,
+                type: "spring",
+                stiffness: 170,
+              }}
+            >
               <ProfileCard />
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="lg:col-span-8 bg-[#FFFFFF] rounded-[20px]">

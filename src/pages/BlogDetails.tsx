@@ -48,10 +48,10 @@ export default function BlogDetails() {
           15<sup>th</sup> Batch
         </p>
       </div>
-      <div className="pb-10">
+      <div className="pb-10 mx-auto ps-[20px] pr-[15px]">
         <h1 className="text-4xl py-4">Related Blogs</h1>
         <div className="">
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-3">
             {relatedBlogs?.map((b: IBlogs) => (
               <BlogCard blog={b} key={b._id} />
             ))}
