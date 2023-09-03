@@ -27,6 +27,12 @@ export default function AllBlogs() {
     return f;
   };
 
+  if (!isLoading && blogsData?.length === 0) {
+    content = (
+      <h1 className="text-5xl text-center">No Blogs available to show!!!</h1>
+    );
+  }
+
   if (!isLoading && blogsData?.length > 0) {
     content = blogsData
       .filter(filterByCategory)
