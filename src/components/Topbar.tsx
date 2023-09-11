@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { motion } from "framer-motion";
 import { AiFillFileText, AiOutlineHome } from "react-icons/ai";
 import { FaRetweet } from "react-icons/fa";
 import { GrArticle } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Topbar() {
+  const { pathname } = useLocation();
+
   return (
     <div>
       <motion.div
@@ -16,7 +19,10 @@ export default function Topbar() {
         <div className="flex justify-center lg:pt-[16px] pt-[5px] gap-[20px] lg:gap-[40px] ">
           <Link to={`/`}>
             <motion.div
-              className="bg-[#E1E8EF] w-[60px] h-[60px] lg:w-[70px]  lg:h-[70px] rounded-[20px] px-auto flex flex-col justify-center items-center cursor-pointer"
+              className={`bg-[#E1E8EF] w-[60px] h-[60px] lg:w-[70px]  lg:h-[70px] rounded-[20px] px-auto flex flex-col justify-center items-center cursor-pointer ${
+                pathname === "/" &&
+                "bg-gradient-to-r from-[#FF9C1A] to-[#E80505] text-white"
+              }`}
               initial={{ x: 500 }}
               animate={{ x: 0 }}
               transition={{
@@ -32,7 +38,10 @@ export default function Topbar() {
           </Link>
           <Link to={`/resume`}>
             <motion.div
-              className="bg-[#E1E8EF] w-[60px] h-[60px] lg:w-[70px] lg:h-[70px] rounded-[20px] px-auto flex flex-col justify-center items-center cursor-pointer"
+              className={`bg-[#E1E8EF] w-[60px] h-[60px] lg:w-[70px]  lg:h-[70px] rounded-[20px] px-auto flex flex-col justify-center items-center cursor-pointer ${
+                pathname === "/resume" &&
+                "bg-gradient-to-r from-[#FF9C1A] to-[#E80505] text-white"
+              }`}
               initial={{ x: 500 }}
               animate={{ x: 0 }}
               transition={{
@@ -48,7 +57,10 @@ export default function Topbar() {
           </Link>
           <Link to={`/blogs`}>
             <motion.div
-              className="bg-[#E1E8EF] w-[60px] h-[60px] lg:w-[70px] lg:h-[70px] rounded-[20px] px-auto flex flex-col justify-center items-center cursor-pointer"
+              className={`bg-[#E1E8EF] w-[60px] h-[60px] lg:w-[70px]  lg:h-[70px] rounded-[20px] px-auto flex flex-col justify-center items-center cursor-pointer ${
+                pathname === "/blogs" &&
+                "bg-gradient-to-r from-[#FF9C1A] to-[#E80505] text-white"
+              }`}
               initial={{ x: 500 }}
               animate={{ x: 0 }}
               transition={{
