@@ -21,7 +21,7 @@ export default function ProfileCard() {
           <GiSmartphone size={25} style={{ color: "#ec1c09" }} />
           <div className="flex flex-col">
             <span>Phone</span>
-            <span>+254723909353</span>
+            <span>+8801724838006</span>
           </div>
         </motion.div>
         <div
@@ -63,7 +63,7 @@ export default function ProfileCard() {
           <VscLocation size={26} style={{ color: "#ec1c09" }} />
           <div className="flex flex-col">
             <span>Location</span>
-            <span>Nairobi, Kenya</span>
+            <span>Pabna, Bangladesh</span>
           </div>
         </motion.div>
         <div
