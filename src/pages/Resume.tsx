@@ -1,24 +1,21 @@
 export default function Resume() {
-  const workSkills = [
-    "nextjs",
-    "redux",
-    "html 5",
-    "html",
-    "css",
-    "tailwind",
-    "react",
-  ];
+  const workSkills = [];
   const softSkills = [
-    "nextjs",
-    "redux",
-    "html 5",
-    "html",
-    "css",
-    "tailwind",
-    "react",
+    "Communication skill",
+    "Networking ",
+    "Teamwork",
+    "Professionalism",
+    "Creativity",
+    "Critical Thinking ",
+    "Adaptability",
+    "flexibility",
+    "Personality development",
+    "Grooming",
+    "Written skill",
+    "Public speaking",
   ];
   return (
-    <div className="ps-[20px] pr-[15px] mx-auto lg:ps-[73px] lg:pr-[55px]">
+    <div className="ps-[20px] pr-[15px] pb-10 mx-auto lg:ps-[73px] lg:pr-[55px]">
       <div className="flex justify-start items-center gap-[33px] pt-[18px]">
         <h1 className="text-[40px]">Resume</h1>
         <div className="">

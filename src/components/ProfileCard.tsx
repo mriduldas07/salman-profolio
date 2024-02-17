@@ -42,7 +42,7 @@ export default function ProfileCard() {
           <LuMailOpen size={23} style={{ color: "#ec1c09" }} />
           <div className="flex flex-col">
             <span>Email</span>
-            <span>mriduldas0325@gmail.com</span>
+            <span>salmanptec@gmail.com</span>
           </div>
         </motion.div>
         <div

@@ -15,9 +15,13 @@ export default function Profile() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1, type: "spring", stiffness: 170 }}
       >
-        <img src="assets/profile_picture.png" className="min-w-full" alt="" />
+        <img
+          src="assets/profile_picture.jpg"
+          className="min-w-full rounded-lg"
+          alt=""
+        />
       </motion.div>
-      <div className="mx-auto">
+      <div className="mx-auto mt-7 lg:mt-10">
         <h1 className="text-center text-[#0B0909] text-[28.42px] font-semibold mb-[4px]">
           Md.Salman Rahman
         </h1>
@@ -72,7 +76,7 @@ export default function Profile() {
               stiffness: 170,
             }}
           >
-            <a href="mailto:mriduldas0325@gmail.com">
+            <a href="mailto:salmanptec@gmail.com">
               <BiLogoGmail size={24} style={{ color: "red" }} />
             </a>
           </motion.div>
