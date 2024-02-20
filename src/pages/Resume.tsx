@@ -1,5 +1,5 @@
 export default function Resume() {
-  const workSkills = [];
+  const workSkills = ["spinning", "weaving"];
   const softSkills = [
     "Communication skill",
     "Networking ",
